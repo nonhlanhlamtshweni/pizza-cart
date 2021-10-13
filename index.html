@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,113 +8,198 @@
     <title>Pizza-Cart</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <center>
+    <div class="center">
         <h1>Perfect Pizza</h1>
-    </center>
-    <div class="cart container">
+        </div>
+
+    <div class="containerBox hidden">
+        <span class="message">Message</span>
+        <br>
+            <button class="close" on type="button">&times;</button>
+    </div>
+
+
+    <div class="contain cart">
         <h2>Place Your Order Here</h2>
-        <table class="cart">
+        <table class="cartTable">
             <tr>
-                <td class="pizza1">
-                    <h3 class="pizza1">Small Pizza</h3>
+                <td class="item">
+                    <h3 class="item">Small Pizza</h3>
                 </td>
-                <td><button class="pizza1" id="test" on type="btn" name="add">+</button></td>
-                <td><h3 class="pizza1qty">0</h3></td>
-                <td><button class="pizza1" on type="btn" name="minus">-</button></td>
-                <td><h3 class="price">R<span class="pizza1Total">0.00</span></h3></td>
+                <td><button class="pBtn small" id="test" on type="button" name="add">+</button></td>
+                <td>
+                    <h3 class="smallPizzaQty item">0</h3>
+                </td>
+                <td><button class="mBtn small" on type="button" name="reduce">-</button></td>
+                <td>
+                    <h3 class="item">R<span class="smallPizzaTotal">0.00</span>
+                    </td>
             </tr>
 
             <tr>
-                <td class="pizza2">
-                    <h3 class="pizza2">Medium Pizza</h3>
+                <td class="item">
+                    <h3 class="item">Medium Pizza</h3>
                 </td>
-                <td><button class="pizza2" id="test" on type="btn" name="add">+</button></td>
-                <td><h3 class="pizza2qty">0</h3></td>
-                <td><button class="pizza2" on type="btn" name="minus">-</button></td>
-                <td><h3 class="price">R<span class="pizza2Total">0.00</span></h3></td>
+                <td><button class="pBtn med" on type="button" name="add">+</button></td>
+                <td>
+                    <h3 class="medPizzaQty item">0</h3>
+                </td>
+                <td><button class="mBtn med" on type="button" name="reduce">-</button></td>
+                <td>
+                    <h3 class="item">R<span class="medPizzaTotal">0.00</span>
+                </td>
             </tr>
 
             <tr>
-                <td class="pizza3">
-                    <h3 class="pizza3">Large Pizza</h3>
+                <td>
+                    <h3 class="item">Large Pizza</h3>
                 </td>
-                <td><button class="pizza3" id="test" on type="btn" name="add">+</button></td>
-                <td><h3 class="pizza3qty">0</h3></td>
-                <td><button class="pizza3" on type="btn" name="minus">-</button></td>
-                <td><h3 class="price">R<span class="pizza3Total">0.00</span></h3></td>
+                <td><button class="pBtn large" on type="button" name="add">+</button></td>
+                <td>
+                    <h3 class="largePizzaQty item">0</h3>
+                </td>
+                <td><button class="mBtn large" on type="button" name="reduce">-</button></td>
+                <td>
+                    <h3 class="item">R<span class="largePizzaTotal">0.00</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <h3 class="item">Total Price</h3>
+                </td>
+                <td>
+                    <h3 class="item">R<span class="cartTotal">0.00</span></h3>
+                </td>
             </tr>
 
             <tr>
-                <td colspan="4"><h3 class="pizzas">Total Cost</h3></td>
-                <td><h3 class="pizzas">R<span class="totalPrice">0.00</span></h3></td>
-            </tr>
-            
-            <tr>
-                <td colspan="5"><btn class="done" on type="btn" name="done">Done</btn></td>
+                <td colspan="5">
+                    <button class="checkOut hidden" on type="button" name="checkOut">Check Out</button>
+                </td>
             </tr>
         </table>
-
-        <div class="payment">
-            <table class="tbl">
-                <tr><h3 class="hidden">Message</h3></tr>
+        
+        <div class="payOut hidden">
+            <table class="cartTable">
                 <tr>
-                    <td><h3>Amount Payable: </h3></td>
-                    <td class="pay">R<input class="totalPrice" on type="money"></td>
+                    <td>
+                        <h3>Amount Payable:</h3>
+                    </td>
+                    <td class="pAmt">R<input class="payAmt" type="number"></td>
                 </tr>
-
-                <tr><td colspan="2">
-                    <btn class="paybtn" on type="btn" name="pay">Pay</btn>
-                </td></tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="payBtn" on type="button" name="pay">Amount to be paid</button>
+                    </td>
+                </tr>
             </table>
         </div>
     </div>
 
 
     <div class="pizzas">
+        <div class="contain small_pizza">
 
-
-        <div class=" pizza small_pizza">
             <h2>Small Pizza</h2>
-            <img src="small pizza.jpg" width="180" height="120">
-            <h3>R49.00</h3>
-            <div>
-                Ham, pepperoni,
-                <div>bacon,
-                    ground beef,</div>
-                BBQ sauce
-            </div>
-        </div>
 
-        <div class="pizza medium_pizza">
-            <h2>Medium Pizza</h2>
-            <img src="medium pizza.jpg" width="180" height="120">
-            <h3>R79.00</h3>
-            <div>
-                The crust crammed with chicken cheese grillers & the pizza topped with tomato & herb pizza sauce,
-                pepperoni,
-                bacon, BBQ sauce & mozzarella
+            <div class="pizza_img">
+                <img src="small pizza.jpg" width="180" height="120">
             </div>
-        </div>
 
-        <div class="pizza large_pizza">
-            <h2>Large Pizza</h2>
-            <img src="large pizza.jpg" width="180" height="120">
-            <h3>R149.00</h3>
-            <div>
-                Three layers & a crust crammed with chicken cheese grillers:our secret cream cheese, chicken, mushroom,
-                diced
-                tomato, onion, mozzarella, tomato & herb pizza sauce, topped with sauce, cheddar & mozzarella
+            <table class="pizza_top">
+                <tr>
+                    <td colspan="2">
+                                <h3>R49.00</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    Ham, pepperoni, bacon, ground beef, BBQ sauce & our special source.
+                                </div>
+                            </td>
+
+                            <td>
+                                <button class="pBtn small buy" on type="button" name="add">Buy</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="contain medium_pizza">
+                    <h2>Medium Pizza</h2>
+                    <div class="pizza_img">
+                        <img src="medium pizza.jpg" width="180" height="120">
+                    </div>
+
+
+                    <table class="pizza_top">
+                        <tr>
+                            <td colspan="2">
+                                <h3>R79.00</h3>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div>
+                                    The crust crammed with chicken cheese grillers, BBQ sauce & mozzarella
+                                </div>
+
+
+                            </td>
+
+                            <td>
+                                <button class="pBtn med buy" on type="button" name="add">Buy</button>
+                                </td>
+                            </tr>
+                        
+                    </table>
+                </div>
+
+                <div class="contain large_pizza">
+                    <h2>Large Pizza</h2>
+                    <div class="pizza_img">
+                        <img src="large pizza.jpg" width="180" height="120">
+                    </div>
+
+                    <table class="pizza_top">
+                    <tr>
+                            <td colspan="2">
+                            <h3>R149.00</h3>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div>
+                                    Three layers crust & crammed with chicken cheese grillers, our secret cream cheese, onion, & mozzarella
+                                </div>
+                            </td>
+                            <td>
+                                <button class="pBtn large buy" on type="button" name="add">Buy</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="pizza contact_us">
-        <center>
-            <h2>Contact Details</h2>
-            Contact us at : 013 913 3030 info@perfectpizza.co.za
-        </center>
-    </div>
-    
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-12">
+              
+                          <div class="center contact pizza contact_us">
+                              <div>
+                
+                        <h2>Contact Details</h2>
+                            Contact us at : 013 913 3030<br>
+                            info@perfectpizza.co.za
+                    
+                </div>
+                <script src="pizza-cart.js" charset="utf-8"></script>
+
 </body>
+
 </html>
